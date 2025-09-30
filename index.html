@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La sociedad del espectáculo</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --base: #D4C6A8;
+      --dark: #B8A782;
+      --darker: #8F7F61;
+      --light: #E9E2D0;
+    }
+
+    /* Animación general */
+    body {
+      background-color: var(--light);
+      color: var(--darker);
+      font-family: 'Georgia', serif;
+      opacity: 0;
+      transition: opacity 1.8s ease-in-out;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+
+    header {
+      background-color: var(--base);
+      color: var(--darker);
+      padding: 2rem 1rem;
+      text-align: center;
+      border-bottom: 3px solid var(--dark);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .card {
+      background-color: var(--base);
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-title {
+      color: var(--darker);
+      border-bottom: 2px solid var(--dark);
+      display: inline-block;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .highlight {
+      color: var(--dark);
+      font-style: italic;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    /* Sección de cita original */
+    .quote-section {
+      background-color: var(--base);
+      border-left: 5px solid var(--dark);
+      padding: 2rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      font-style: italic;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease;
+    }
+
+    .quote-section:hover {
+      transform: scale(1.01);
+    }
+
+    .quote-author {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: var(--darker);
+    }
+
+    /* Animaciones por scroll */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>La Sociedad del Espectáculo</h1>
+    <p>Interpretación filosófica del pensamiento de Guy Debord</p>
+  </header>
+
+  <main class="container py-5">
+
+    <!-- NUEVA SECCIÓN: Cita original -->
+    <section class="fade-in">
+      <h2 class="section-title">Texto Original</h2>
+      <div class="quote-section">
+        <p>
+          “La realidad objetiva está presente en ambos lados. Cada noción así fijada no tiene otro fondo que su paso a lo opuesto: 
+          la realidad surge en el espectáculo, y el espectáculo es real. Esta alienación recíproca es la esencia 
+          y el sostén de la sociedad existente.”
+        </p>
+        <div class="quote-author">— Guy Debord</div>
+      </div>
+    </section>
+
+    <section class="mb-5 fade-in">
+      <h2 class="section-title">Reflexión Filosófica</h2>
+      <div class="card p-4">
+        <p>
+          La cita nos invita a reflexionar sobre cómo la <span class="highlight">realidad y el espectáculo</span> se mezclan en la sociedad moderna. 
+          Lo que antes era una diferencia clara entre lo real y lo aparente, ahora se fusiona: la realidad se manifiesta 
+          a través de lo que vemos en los medios, y el espectáculo, a su vez, construye lo que entendemos por real.
+        </p>
+        <p>
+          En esta <strong>alienación recíproca</strong>, la verdad se convierte en apariencia y la apariencia en verdad. 
+          Es un ciclo que sostiene a la sociedad contemporánea, donde el valor de las cosas depende más de su 
+          visibilidad que de su esencia.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-5 fade-in">
+      <h2 class="section-title">Ejemplo Práctico</h2>
+      <div class="card p-4">
+        <p>
+          Un ejemplo claro es el de un hombre que <strong>aparenta ser rico</strong> alquilando un auto de lujo para vender un curso de trading. 
+          Su imagen de éxito genera confianza y deseo, haciendo que otros compren su producto. 
+          Paradójicamente, el dinero real no viene del trading, sino de la <em>venta de la ilusión</em>. 
+          Así, la apariencia se convierte en la causa de una realidad económica.
+        </p>
+      </div>
+    </section>
+
+    <section class="fade-in">
+      <h2 class="section-title">Conclusión</h2>
+      <div class="card p-4">
+        <p>
+          La <strong>sociedad del espectáculo</strong> convierte las imágenes en verdades y las apariencias en hechos. 
+          Vivimos en un mundo donde la exposición es sinónimo de existencia. 
+          Lo que no se muestra, parece no existir; y lo que brilla ante todos, se convierte en lo real.
+        </p>
+        <p>
+          Debord nos advierte que esta inversión del mundo —donde la representación sustituye a la vida— 
+          es la base de la alienación moderna. La tarea filosófica es entonces recuperar la esencia tras la imagen.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Proyecto elaborado por <strong>Michelle Saray Peña Correa</strong> y <strong>Taliana Álvarez Sánchez</strong></p>
+    <p>Grado 8.A</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Efecto de carga general
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+      showElements();
+    });
+
+    // Animación al hacer scroll
+    const elements = document.querySelectorAll('.fade-in');
+    const showElements = () => {
+      const trigger = window.innerHeight * 0.9;
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < trigger) {
+          el.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', showElements);
+  </script>
+</body>
+</html>
+
+
+
+
